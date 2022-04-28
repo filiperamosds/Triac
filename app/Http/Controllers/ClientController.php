@@ -37,7 +37,7 @@ class ClientController extends Controller
 
     public function destroy($id)
     {
-        Cliente::where('id', $id)->update(['data_exclusao' => date('d/m/Y')]);
+        Cliente::where('id', $id)->update(['data_exclusao' => date('Y-m-d')]);
         return back()->with('error', 'Cliente deletado com sucesso!');
     }
 }
